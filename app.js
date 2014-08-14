@@ -7,8 +7,6 @@ var topics = require("./topics");
 
 var app = express();
 
-app.use("/images", express.static(path.join(__dirname, "images")));
-
 // jsonp api
 app.get('/', function(req, res) {
 
