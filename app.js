@@ -11,8 +11,8 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 
 // jsonp api
 app.get('/', function(req, res) {
+
     var topic = topics.getRandom();
-    console.log(topic)
     var promise = fetch.image(topic);
 
     promise.then(function(promise) {
