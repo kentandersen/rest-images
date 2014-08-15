@@ -10,7 +10,7 @@ var req = /imgurl=(.*?)&/;
 var getUrl = function(url) {
   var u = req.exec(url);
   if(u[1]) {
-    return u[1];
+    return decodeURIComponent(decodeURIComponent(u[1]));
   } else {
     return url;
   }
